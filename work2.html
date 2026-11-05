@@ -10,7 +10,7 @@
         nav {background: #2b2b2b;padding:15px;text-align:center;position:sticky;top:0;z-index:99;}
         nav a {color:#ffd700;text-decoration:none;margin:0 18px;font-size:18px;}
         nav a:hover {color:#fff;}
-        section {width:80%;margin:40px auto;padding:25px;background:#282828;border-radius:10px;}
+        section {width:80%;margin:40px auto;padding:25px;background:#282828;border-radius:10px;scroll-margin-top: 80px;}
         h2 {color:#ffd700;margin-bottom:16px;border-left:4px solid #c41e3a;padding-left:10px;}
         table {width:100%;border-collapse:collapse;margin:20px 0;}
         table th,table td {border:1px solid #555;padding:12px;text-align:center;}
@@ -19,30 +19,25 @@
         button {background:#c41e3a;color:#fff;cursor:pointer;font-weight:bold;}
         video {width:100%;border-radius:8px;margin:15px 0;}
         footer {text-align:center;padding:20px;background:#111;margin-top:40px;color:#aaa;}
+        .photo-single {margin-top:20px;text-align:center;}
+        .photo-single img {width:70%;border-radius:8px;height:auto;}
     </style>
 </head>
 <body>
-    <!-- 背景音乐 -->
-    <audio autoplay loop controls>
-        <source src="bgm.mp3" type="audio/mpeg">
-        你的浏览器不支持音频播放
-    
-
     <header>
         <h1>🔥 打击乐社 招新 🔥</h1>
         <p>鼓点不息，节奏为王！</p>
     </header>
 
-    <!-- 锚点导航 -->
     <nav>
         <a href="#intro">社团简介</a>
+        <a href="#photo">图片介绍</a>
         <a href="#activity">活动安排</a>
         <a href="#video">演出视频</a>
         <a href="#join">报名表单</a>
         <a href="about.html">关于我们</a>
     </nav>
 
-    <!-- 锚点1：社团简介 -->
     <section id="intro">
         <h2>社团简介</h2>
         <p>打击乐社汇聚热爱节奏的同学，包含架子鼓、小军鼓、卡洪鼓、邦戈鼓、铃鼓等多种打击乐器。
@@ -50,7 +45,14 @@
         感受节拍的力量，一起用鼓点点燃舞台！</p>
     </section>
 
-    <!-- 锚点2：活动表格 -->
+    <section id="photo">
+        <h2>图片介绍</h2>
+        <p>社团演出现场实拍：</p>
+        <div class="photo-single">
+            <img src="show.jpg" alt="打击乐社演出现场">
+        </div>
+    </section>
+
     <section id="activity">
         <h2>日常活动安排表</h2>
         <table>
@@ -77,7 +79,6 @@
         </table>
     </section>
 
-    <!-- 锚点3：视频嵌入 -->
     <section id="video">
         <h2>社团演出视频</h2>
         <video controls>
@@ -87,7 +88,6 @@
         <p>往期晚会架子鼓合奏现场</p>
     </section>
 
-    <!-- 锚点4：报名表单 -->
     <section id="join">
         <h2>招新报名</h2>
         <form>
@@ -108,5 +108,11 @@
     <footer>
         <p>打击乐社 © 2026 网页作业</p>
     </footer>
+
+    <!-- ✅ 背景音乐，标签完整闭合，带循环播放，控制器显示 -->
+    <audio id="bgAudio" loop controls>
+        <source src="bgm.mp3" type="audio/mpeg">
+        你的浏览器不支持音频播放
+    
 </body>
 </html>
